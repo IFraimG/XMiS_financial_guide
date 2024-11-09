@@ -6,15 +6,13 @@ import MainInfo from "@/components/feature_main/MainInfo.vue"
 import CustomFooter from "@/components/feature_main/CustomFooter.vue"
 import ModalAuth from "@/components/feature_main/ModalAuth.vue"
 
-import "@/assets/styles/feature_main/main_home.scss"
-
 const isAuth = ref<boolean | null>(null)
 
 onMounted(() => {
   // запрос
   setTimeout(() => {
     isAuth.value = true
-  }, 3000)
+  }, 2000)
   
 })
 
@@ -38,9 +36,9 @@ const setAuth = (login: string) => {
 </script>
 
 <template>
-  <div class="home__wrapper">
+  <div class="page__wrapper">
     <modal-auth @sendAuth="setAuth" v-if="isAuth == null || !isAuth" />
-    <div class="home">
+    <div class="page">
       <div class="header__wrapper">
         <div class="header">
             <custom-header />

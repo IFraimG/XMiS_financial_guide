@@ -27,7 +27,7 @@
         &-last {
             width: 60px;
             height: 60px;
-            background: #B3B3B3;
+            background: #F3F7FA;
             border-radius: 50%;
             margin-left: 60px;
         }
@@ -36,5 +36,27 @@
     &__link {
         color: $link-color;
         font-size: 16px;
+    }
+}
+
+@media(max-width: 657px) {
+    .header__item-last {
+        display: none;
+    }
+}
+
+@media(max-width: 500px) {
+    .header__link {
+        font-size: 12px;
+    }
+    .header__item {
+        margin: 0 6px;
+    }
+}
+
+
+@media(max-width: 400px) {
+    .header__link {
+        display: none;
     }
 }

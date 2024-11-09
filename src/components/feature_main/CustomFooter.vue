@@ -6,7 +6,9 @@ import "@/assets/styles/feature_main/main_footer.scss"
 <template>
   <div class="content__wrapper header__content footer__content">
     <div class="header__list-left">
-      <img src="@/assets/images/logo.png">
+      <router-link to="/">
+        <img src="@/assets/images/logo.png">
+      </router-link>
     </div>
     <p>© 2006—2024, АО «ВТБ», лицензия ЦБ РФ № xxxx</p>
     <ul class="header__list">

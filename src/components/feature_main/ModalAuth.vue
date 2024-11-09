@@ -22,7 +22,7 @@ const sendAuth = () => {
                 <template #content>
                     <div class="modal__fields">
                         <input class="modal__input" v-model="login" type="text" placeholder="Логин">
-                        <button class="modal__send" @click="sendAuth">></button>
+                        <button class="modal__send" @click="sendAuth" disabled="true">></button>
                     </div>
                 </template>
             </main-card>

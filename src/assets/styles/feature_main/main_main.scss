@@ -23,6 +23,11 @@
                 margin-bottom: 25px;
                 color: #000;
             }
+
+            &-title {
+                display: flex;
+                gap: 0 10px;
+            }
         }
     }
     &__right {

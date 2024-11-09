@@ -6,7 +6,9 @@ import "@/assets/styles/feature_main/main_header.scss"
 <template>
   <div class="content__wrapper header__content">
     <div class="header__list-left">
-      <img src="@/assets/images/logo.png">
+      <router-link to="/">
+        <img src="@/assets/images/logo.png">
+      </router-link>
     </div>
     <ul class="header__list">
       <li class="header__item">
