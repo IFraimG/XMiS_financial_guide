@@ -1,0 +1,94 @@
+@import "../colors.scss";
+
+.main {
+    margin-top: 36px;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        gap: 0 40px;
+    }
+
+    &__left {
+        width: 100%;
+        &-card {
+            max-width: 570px;
+            background: #fff;
+            margin-top: 18px;
+            box-shadow: 0px 4px 10px 0px #00000040;
+            border-radius: 12px;
+            padding: 36px;
+            h2 {
+                font-size: 27px;
+                margin-bottom: 25px;
+                color: #000;
+            }
+        }
+    }
+    &__right {
+        width: 100%;
+    }
+
+    &__cash {
+        height: 210px;
+        background: $custom-blue;
+        color: #fff;
+        h2 {
+            font-size: 30px;
+            color: #fff;
+        }
+        h1 {
+            font-size: 45px;
+        }
+    }
+
+    &__expense {
+        min-height: 370px;
+        &-list {
+            display: flex;
+            gap: 10px 20px;
+        }
+    }
+
+    &__bonus {
+
+        &-list {
+            display: flex;
+            gap: 10px 20px;
+
+        }
+    }
+
+    &__link {
+        background-color: $link-blue;
+        color: #fff;
+        border-radius: 12px;
+        padding: 12px 24px;
+        font-size: 16px;
+        height: 43px;
+        margin-top: 20px;
+        min-width: 120px;
+    }
+
+    &__text {
+        &-info {
+            color: #4B5563;
+        }
+    }
+
+    &__details {
+        &-item {
+            display: flex;
+            justify-content: space-between;
+            gap: 0 10px;
+            flex-wrap: nowrap;
+            &:hover {
+                p {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        &-list {}
+    }
+}
