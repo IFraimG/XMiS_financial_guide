@@ -1,19 +1,20 @@
 <script setup lang="ts">
-import { onMounted, ref, watchEffect } from "vue"
+import { onMounted, ref, watchEffect, nextTick, onUnmounted } from "vue"
 
 import CustomHeader from "@/components/feature_main/CustomHeader.vue"
 import MainInfo from "@/components/feature_main/MainInfo.vue"
 import CustomFooter from "@/components/feature_main/CustomFooter.vue"
 import ModalAuth from "@/components/feature_main/ModalAuth.vue"
 
-const isAuth = ref<boolean | null>(null)
+const isAuth = ref<boolean | null>(false)
+
 
 onMounted(() => {
-  // запрос
-  setTimeout(() => {
-    isAuth.value = true
-  }, 2000)
-  
+    new Promise((resolve, reject) => {
+      setTimeout(() => {
+        isAuth.value = true
+      }, 2000)
+    });
 })
 
 watchEffect(() => {
@@ -37,7 +38,7 @@ const setAuth = (login: string) => {
 
 <template>
   <div class="page__wrapper">
-    <modal-auth @sendAuth="setAuth" v-if="isAuth == null || !isAuth" />
+    <modal-auth @sendAuth="setAuth" v-if="!isAuth" />
     <div class="page">
       <div class="header__wrapper">
         <div class="header">

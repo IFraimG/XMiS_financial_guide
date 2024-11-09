@@ -6,9 +6,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: calc(50vh + 300px);
     &__wrapper {
-        position: absolute;
+        position: fixed;
         left: 0;
         top: 0;
         width: 100%;
