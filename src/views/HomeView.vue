@@ -12,10 +12,10 @@ const isAuth = ref<boolean | null>(false)
 onMounted(async () => {
   nextTick(() => setTimeout(() => isAuth.value = true, 2000))
 
-  let result = await fetch("https://api.bankingapi.ru/extapi/aft/clientInfo/hackathon/v1/accounts", { method: "GET", headers: { Authorization: import.meta.env.VITE_API_ACCESS_TOKEN }  })
-  let resResult = await result.json()
+  // let result = await fetch("https://api.bankingapi.ru/extapi/aft/clientInfo/hackathon/v1/accounts", { method: "GET", headers: { Authorization: import.meta.env.VITE_API_ACCESS_TOKEN }  })
+  // let resResult = await result.json()
 
-  console.log(resResult);
+  // console.log(resResult);
   
 })
 

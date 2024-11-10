@@ -41,16 +41,16 @@
         </template>
         <template #content>
           <div class="main__bonus-list">
-          <div class="box__info box__info-blue">
-            <p>Доступность</p>
+            <div class="box__info box__info-blue">
+              <p>Доступность</p>
+            </div>
+            <div class="box__info box__info-pink">
+              <p>Быстродействие</p>
+            </div>
+            <div class="box__info box__info-blue">
+              <p>Открытость</p>
+            </div>
           </div>
-          <div class="box__info box__info-pink">
-            <p>Быстродействие</p>
-          </div>
-          <div class="box__info box__info-blue">
-            <p>Открытость</p>
-          </div>
-        </div>
         </template>
         <template #link></template>
       </main-card>
