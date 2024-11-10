@@ -28,3 +28,10 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+.env.dev
+.env.production
+
+
+cert.pem
+key.pem

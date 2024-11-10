@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref, watchEffect, nextTick, onUnmounted } from "vue"
+import { onMounted, ref, watchEffect, nextTick } from "vue"
 
 import CustomHeader from "@/components/feature_main/CustomHeader.vue"
 import MainInfo from "@/components/feature_main/MainInfo.vue"
@@ -9,12 +9,14 @@ import ModalAuth from "@/components/feature_main/ModalAuth.vue"
 const isAuth = ref<boolean | null>(false)
 
 
-onMounted(() => {
-    new Promise((resolve, reject) => {
-      setTimeout(() => {
-        isAuth.value = true
-      }, 2000)
-    });
+onMounted(async () => {
+  nextTick(() => setTimeout(() => isAuth.value = true, 2000))
+
+  let result = await fetch("https://api.bankingapi.ru/extapi/aft/clientInfo/hackathon/v1/accounts", { method: "GET", headers: { Authorization: import.meta.env.VITE_API_ACCESS_TOKEN }  })
+  let resResult = await result.json()
+
+  console.log(resResult);
+  
 })
 
 watchEffect(() => {
@@ -26,9 +28,7 @@ watchEffect(() => {
 
 const setAuth = (login: string) => {
   console.log(login);
-  if (login.length == 0) {
-    
-  } else {
+  if (login.length == 0) {} else {
     // запрос
     isAuth.value = true
   }

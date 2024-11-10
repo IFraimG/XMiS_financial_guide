@@ -6,21 +6,30 @@
           Все счета
         </template>
         <template #content>
-          <h1>107 840, 91 ₽</h1>
+          <h1>{{ balanceNum }} {{ balanceNum2 }}, {{ balanceNumOst }} ₽</h1>
         </template>
         <template #link></template>
       </main-card>
       <main-card class="main__expense">
         <template #header>
-          Ваши траты за последние полгода
+          Ваши доходы за последние полгода
         </template>
         <template #content>
           <div class="main__expense-list">
           <div class="box__info box__info-blue">
-            <p>Кафе 2 870 ₽</p>
+            <p>Начисление зарплаты 700000 ₽</p>
+          </div>
+          <div class="box__info box__info-pink">
+            <p>Кэшбек 3 400 ₽</p>
           </div>
           <div class="box__info box__info-green">
-            <p>Переводы 1 500 ₽</p>
+            <p>Пополнения 65 000 ₽</p>
+          </div>
+          <div class="box__info box__info-blue">
+            <p>Переводы 11 000 ₽</p>
+          </div>
+          <div class="box__info box__info-pink">
+            <p>Инвестиции 80 000 ₽</p>
           </div>
         </div>
         </template>
@@ -33,13 +42,13 @@
         <template #content>
           <div class="main__bonus-list">
           <div class="box__info box__info-blue">
-            <p>От 600 ₽ на каждую дату</p>
+            <p>Доступность</p>
           </div>
           <div class="box__info box__info-pink">
-            <p>Покупай кофе и еду</p>
+            <p>Быстродействие</p>
           </div>
           <div class="box__info box__info-blue">
-            <p>Кэшбэк до 30% на развлечения</p>
+            <p>Открытость</p>
           </div>
         </div>
         </template>
@@ -48,31 +57,36 @@
     </div>
     <div class="main__right">
       <main-card class="main__finance">
-        <template #header>Анализ финансов</template>
+        <template #header>Анализ доходов и сбережений</template>
         <template #content>
-          <p class="main__text-info">Можно заработать 65907 ₽ на вложениях</p>
+          <p class="main__text-info">Можно заработать {{ borrow }} ₽ на вложениях</p>
         </template>
         <template #link>
           <router-link to="/financy">
-            <button class="main__link">Кнопка</button>
+            <button class="main__link">Перейти</button>
         </router-link>
         </template>
       </main-card>
-      <main-card class="main__finance">
+      <!-- <main-card class="main__finance">
         <template #header>Инвестируйте и зарабатывайте</template>
         <template #content>
           <p class="main__text-info">Можно заработать 65907 ₽ на вложениях</p>
         </template>
         <template #link>
           <a :href="testLink" target="_blank">
-            <button class="main__link">Кнопка</button>
+            <button class="main__link">Перейти</button>
           </a>
         </template>
-      </main-card>
+      </main-card> -->
       <main-card class="main__props">
         <template #header>Реквизиты</template>
         <template #content>
-          <p class="main__text-info">Номер договора xxxx</p>
+          <p class="main__text-info">Номер счёта хххх хххх хххх хххх</p>
+          <p class="main__text-info">ИНН</p>
+          <p class="main__text-info">БИК 1111111111</p>
+          <p class="main__text-info">ИНН Банка 1111111111</p>
+          <p class="main__text-info">КПП Банка 111111111</p>
+          <p class="main__text-info">Корпоративный счет 11111111111111111</p>
         </template>
       </main-card>
       <main-card class="main__details">
@@ -103,5 +117,10 @@ const detailsList = [
 ]
 
 const testLink = "https://www.vtb.ru/personal/investicii/open/"
+
+const balanceNum = Math.floor(Math.random() * (999 - 100 + 1)) + 100
+const balanceNum2 = Math.floor(Math.random() * (999 - 100 + 1)) + 100
+const balanceNumOst = Math.floor(Math.random() * (99 - 10 + 1)) + 10
+const borrow = Math.floor(Math.random() * (99999 - 10000 + 1)) + 10000
 
 </script>
