@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { defineEmits, ref } from "vue"
 import "@/assets/styles/feature_main/main_modal.scss"
-import MainCard from "@/components/feature_main/MainCard.vue"
+import MainCard from "@/components/ui/MainCard.vue"
 
 const emit = defineEmits(["sendAuth"])
 

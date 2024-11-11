@@ -45,5 +45,5 @@
   </div>
 </template>
 <script setup lang="ts">
-import MainCard from '@/components/feature_main/MainCard.vue'
+import MainCard from '@/components/ui/MainCard.vue'
 </script>

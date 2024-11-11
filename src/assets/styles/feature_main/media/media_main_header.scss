@@ -1,0 +1,22 @@
+
+@media(max-width: 657px) {
+    .header__item-last {
+        display: none;
+    }
+}
+
+@media(max-width: 500px) {
+    .header__link {
+        font-size: 12px;
+    }
+    .header__item {
+        margin: 0 6px;
+    }
+}
+
+
+@media(max-width: 400px) {
+    .header__link {
+        display: none;
+    }
+}

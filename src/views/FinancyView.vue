@@ -32,8 +32,6 @@
 
 <script setup lang="ts">
 import CustomHeader from '@/components/feature_main/CustomHeader.vue'
-import CustomFooter from '@/components/feature_main/CustomFooter.vue'
-import MainCard from '@/components/feature_main/MainCard.vue'
 import FinancyAds from '@/components/feature_financy/FinancyAds.vue'
 import '@/assets/styles/feature_financy/financy_main.scss'
 

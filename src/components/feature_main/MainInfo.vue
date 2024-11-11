@@ -106,7 +106,7 @@
 
 <script setup lang="ts">
 import "@/assets/styles/feature_main/main_main.scss"
-import MainCard from "@/components/feature_main/MainCard.vue"
+import MainCard from "@/components/ui/MainCard.vue"
 
 const detailsList = [
   { title: "Лимиты на переводы, снятия и пополнения", link: "/" },
